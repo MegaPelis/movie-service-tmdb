@@ -37,7 +37,7 @@ public class FindAllVideoByIdMovieHandler extends MovieHandler {
     @Override
     public String url(Object object) throws MovieException {
         FindAllVideoByIdMovieRQ findByIdAndSeasonAndEpisodeSerieRQ = (FindAllVideoByIdMovieRQ) object;
-        tmdbUrl.setOperation(MovieCommon.getEnv(MovieConstant.STRING_ENV_MEGAPELIS_TMDB_HOST_MOVIE_BY_ID_ALL_VIDEO));
+        tmdbUrl.setOperation(MovieCommon.getEnv(MovieConstant.STRING_ENV_MEGAPELIS_TMDB_HOST_MOVIE_BY_ID_ALL_VIDEO_NAME));
         MovieCommon.addProperties(tmdbUrl, tmdbUrl.getHost(), findByIdAndSeasonAndEpisodeSerieRQ.getIdMovie(), tmdbUrl.getKey());
         return buildUrl(tmdbUrl);
     }
