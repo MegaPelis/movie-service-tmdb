@@ -36,7 +36,7 @@ public class FindAllByPopularMovieHandler extends MovieHandler {
     @Override
     public String url(Object object) throws MovieException {
         FindAllByPopularMovieRQ findAllByPopularMovieRQ = (FindAllByPopularMovieRQ) object;
-        tmdbUrl.setOperation(MovieCommon.getEnv(MovieConstant.STRING_ENV_MEGAPELIS_TMDB_HOST_MOVIE_POPULAR));
+        tmdbUrl.setOperation(MovieCommon.getEnv(MovieConstant.STRING_ENV_MEGAPELIS_TMDB_HOST_MOVIE_POPULAR_NAME));
         MovieCommon.addProperties(tmdbUrl, tmdbUrl.getHost(), tmdbUrl.getKey(), String.valueOf(findAllByPopularMovieRQ.getPage()));
         return buildUrl(tmdbUrl);
     }
