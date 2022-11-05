@@ -37,7 +37,7 @@ public class FindAllImagesByIdMovieHandler extends MovieHandler {
     @Override
     public String url(Object object) throws MovieException {
         FindAllImagesByIdMovieRQ findByIdAndSeasonMovieRQ = (FindAllImagesByIdMovieRQ) object;
-        tmdbUrl.setOperation(MovieCommon.getEnv(MovieConstant.STRING_ENV_MEGAPELIS_TMDB_HOST_MOVIE_BY_ID_ALL_IMAGES));
+        tmdbUrl.setOperation(MovieCommon.getEnv(MovieConstant.STRING_ENV_MEGAPELIS_TMDB_HOST_MOVIE_BY_ID_ALL_IMAGES_NAME));
         MovieCommon.addProperties(tmdbUrl, tmdbUrl.getHost(), findByIdAndSeasonMovieRQ.getIdMovie(), tmdbUrl.getKey());
         return buildUrl(tmdbUrl);
     }
